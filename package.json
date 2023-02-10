@@ -1,0 +1,26 @@
+{
+  "name": "shedali-typescript-starter",
+  "version": "1.0.0",
+  "description": "tsc-watch tsup vitest starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc-watch -p tsconfig.json --onSuccess 'run-p build test'",
+    "build": "tsup src/index.ts --format cjs, esm --dts",
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "Franz Sittampalam",
+  "license": "ISC",
+  "devDependencies": {
+    "esno": "*",
+    "mobx": "^6.7.0",
+    "mobx-keystone": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "tsc-watch": "^6.0.0",
+    "tsup": "*",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
+  }
+}
